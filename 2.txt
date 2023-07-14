@@ -1,0 +1,53 @@
+In Javascript memory is managed automatically by garbage collector. The core principle of memory management is the reachability.
+Reachable values are those that are available or in use, they are guaranteed to be in memory.
+
+There is a set of reachable values that cannot be removed: global variables, currently executing function, its local variables, parameters - called roots.
+Any other value is considered reachable if it is accessible from the root by reference or chain of references.
+Basic garbage collection algorithm is called “mark-and-sweep”.
+
+1. The garbage collector "marks" (remembers) all root objects.
+2. Then he goes through them and "marks" all the links from them.
+3. It then walks over the marked objects and marks their references. All visited objects are remembered in order not to visit the same object twice in the future.
+4. All unmarked objects are removed.
+
+According to this, there are some types of existing memory leaks:
+
+// Accidental global variables
+// Reference to an undeclared variable creates a new variable inside the global object.
+
+function test() {
+  var1 = 123; // same as `window.var1 = 123;`
+}
+
+Fix: ‘use strict’
+
+// Timers / Event listeners
+var outerVariable = { … };
+setInterval(function() {
+    // using outerVariable
+}, 1000);
+
+Fix: clearInterval(timerId);
+
+
+// DOM references
+const  button = document.getElementById(‘button’);
+const temp = document.getElementById(‘temp’);
+trigger.addEventListener(‘click’, function(){
+   temp();
+});
+
+Fix: { once: true }
+
+// Closures
+function outer() {
+  const array = [];
+	return function inner(value) { array.push(value); }
+}
+
+const add = outer();
+for (let i = 0; i< 99999999; i++) {
+  add(i);
+}
+
+Fix: refine logic / return and manage hidden array

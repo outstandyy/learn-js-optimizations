@@ -1,0 +1,6 @@
+Dead code is code that is never used. It is not referenced by any other code, not used in the final build.
+In the Java / С# programming languages, dead code elimination involves the removal of code during the compilation phase. On the other hand, JavaScript is primarily utilized for web development and runs within a browser environment. Dead code elimination in JavaScript is primarily handled by JavaScript engines or JIT compilers.
+This is because JavaScript is an interpreted language, and the execution environment can dynamically evaluate the code and identify which parts are unreachable.
+JavaScript is dynamically typed, so types can change at runtime. This dynamic nature makes it difficult to determine the types of variables and analyze their usage accurately.
+Dead code elimination relies on static analysis to identify unused code, but in JavaScript it becomes more complex because of lack of explicit type information.
+It’s also difficult to determine the control flow and identify code that may or may not be executed because of JavaScript asynchronous nature and complex scoping.

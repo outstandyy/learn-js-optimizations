@@ -1,0 +1,53 @@
+Closure is function bounded with outer scope variables of this function.
+In JS all functions are closures. They can remember variable values from outer scope.
+The most popular example for closure usage is counter:
+
+function createCounter() {
+  let count = 0;
+  return function inner() {
+    return ++count;
+  };
+}
+
+const counter = createCounter();
+counter(); // 1
+counter(); // 2
+
+Here inner function has access to outer scope because of lexical environment.
+More real life examples can be event handling and module for example:
+
+// event handling
+
+function setupButton() {
+  const button = document.getElementById('myButton');
+  let count = 0;
+  button.addEventListener('click', function() {
+    count++;
+  });
+}
+setupButton();
+
+// old module pattern
+
+const counterModule = (function() {
+  let count = 0;
+  function increment() {
+    return ++count;
+  }
+  function decrement() {
+    return --count;
+  }
+  function getCount() {
+    return count;
+  }
+
+  return {
+    increment,
+    decrement,
+    getCount
+  };
+})();
+
+counterModule.increment(); // 1
+counterModule.increment(); // 2
+counterModule.getCount(); // 2

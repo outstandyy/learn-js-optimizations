@@ -1,0 +1,4 @@
+New features are added to the standard by the TC39 committee and each feature goes through several stages before becoming part of the EcmaScript.
+So I consider it is unlikely that ill-conceived features with problems in performance will appear.
+Also there is big community, greatest developers, which can influence to JS future.
+From another side perhaps the developers will use new improvements incorrectly, and then the code permanence will decrease.

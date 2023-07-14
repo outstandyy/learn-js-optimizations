@@ -1,0 +1,9 @@
+It’s difficult to answer this question, because there are a lot of new things were created in JS ecosystem and in web in general.
+The first big step is web standardization, decided to update EcmaScript standards every year.
+This lead us to new approved and deeply checked features.
+We can highlight es6 features set like Promises (allows us to write more performant async code), classes (simplified,  more understandable and beautiful code which leads to maintainability), many useful api with replacing old approaches.
+During this time cross-browser compatibility improved, fixed browser bugs, engines like V8 improves all the time.
+Another big step is creating typescript and adding string typing, interfaces, enums and so on. It leads us to great code maintainability.
+I have to add to this list Node.js and NPM, creating huge amount of useful 3rd party libraries in  JS ecosystem.
+From network view of performance improvements there are minification / uglification / dead code elimination tools, asset compression, bundling, cdn usage and lazy loading approach.
+Debugging tools also evolved into helpful and complex things to increase web page performance.
