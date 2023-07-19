@@ -73,4 +73,4 @@ async / defer (JavaScript blocks the normal parsing of the HTML document, so whe
 - https://habr.com/ru/articles/445264/
 - https://github.com/mgechev/angular-performance-checklist
 - https://nitropack.io/blog/post/critical-rendering-path-optimization
-- 
+- https://deepu.tech/memory-management-in-v8/ (stack)
