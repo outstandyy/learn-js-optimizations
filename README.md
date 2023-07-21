@@ -74,3 +74,6 @@ async / defer (JavaScript blocks the normal parsing of the HTML document, so whe
 - https://github.com/mgechev/angular-performance-checklist
 - https://nitropack.io/blog/post/critical-rendering-path-optimization
 - https://deepu.tech/memory-management-in-v8/ (stack)
+- https://www.youtube.com/watch?v=9rizDPIIYEY&ab_channel=JSConf (rendering)
+- https://www.youtube.com/watch?v=WeipWuLJZCM&ab_channel=AyubBegimkulov
+- https://huijing.github.io/slides/03-css-triggers/#/5 (css triggers)
